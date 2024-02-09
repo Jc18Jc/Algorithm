@@ -4,6 +4,10 @@ from collections import deque
 
 n, m = map(int, input().split())
 board = [list(input().strip()) for _ in range(n)]
+# board=[]
+# for _ in range(n):
+#     board.append(input())
+
 di = [1, -1, 0, 0]
 dj = [0, 0, 1, -1]
 answer = 0
@@ -37,8 +41,8 @@ print(answer)
 # 최대 가능한 시간을 한 번 찍으면 브레이크 거는 식으로 하면 통과 된다는데 굳이 그렇게 해야 하나 싶음
 # 근데 이 코드는 python도 통과해서 확인해보려고 함
 # 코드 리뷰 참고해서 함수화의 차이만 있다고 느껴져 함수화 해봤는데 아까보다 채점은 많이 됐음, 시간초과 여전, 함수화하고 어떤 부분이 시간에 영향을 미쳤을까
+# 입력도 똑같이 바꿔봤는데 차이 x
 '''
-
 import sys
 from collections import deque
 input = sys.stdin.readline
