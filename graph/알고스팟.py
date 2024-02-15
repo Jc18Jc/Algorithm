@@ -62,3 +62,18 @@ def dijkstra(): # 다익스트라로 접근, 나도 우선순위큐 쓰면서 �
 dijkstra()
 print(distance[N - 1][M - 1])
 '''
+
+### 숏코딩 코드 리뷰 ###
+'''
+from heapq import*
+R=range
+c,r=map(int,input().split())
+m=[[*map(int,input())]for i in R(r)] # [*map(int, input())] = list(map(int, input()))
+q=[[0,0,0]]
+while q:
+    b,x,y=heappop(q)
+    if (x,y)==(r-1,c-1):print(b);break # (x,y)==(r-1,c-1) = x==r-1 and y==c-1
+    for i,j in((0,1),(1,0),(0,-1),(-1,0)): # di, dj 설정안하고 for in 으로 네 가지 넣어주기
+        nx,ny=x+i,y+j
+        if 0<=nx<r and 0<=ny<c and m[nx][ny]<2:heappush(q,[b+m[nx][ny],nx,ny]);m[nx][ny]=2 # visited 배열 없이 맵에 바로 표시
+'''
