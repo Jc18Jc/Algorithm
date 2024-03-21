@@ -73,7 +73,7 @@ print(ans)
 
 '''
 
-### 적용 해본 내 코드 ###
+### 적용 해본 코드 ###
 '''
 from bisect import bisect_left, bisect_right
 from itertools import combinations
