@@ -1,11 +1,13 @@
 n=int(input())
+
 i=0
 count=0
 while i < n:
     count=count*2+1
     i+=1
 print(count)
-
+if n > 20:
+    exit()
 def rec(num, cur, aim):
     if num == 1:
         print(cur, aim)
