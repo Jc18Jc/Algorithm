@@ -37,6 +37,5 @@ while left <= right and right < n:
         result = min(result, arr[right]-arr[left]) # 만약 left right가 같은 경우는 M이 0인 케이스밖에 없고 그러면 left가 right를 역전하지만 끝내도 되는구나
         left += 1
 
-# 결과 출력
 print(result)
 '''
