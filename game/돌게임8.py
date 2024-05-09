@@ -18,8 +18,21 @@ for i in range(1, 2001):
 if M <= 2000:
     exit(print(array[:M+1].count(False)))
 
-pattern=[False for _ in range(2001)]
-
-m = 1
+pl = 0
 for i in range(1, 2001):
-    if 
+    tmp = array[1:i+1]
+    k=1
+    while k+i <= 2001:
+        if array[k:k+i] == tmp:
+            k+=i
+        else:
+            break
+    else:
+        pl=i
+        break
+for i in range(1, 23):
+    print(i, array[i])
+firstAnswer = array[:pl+1].count(False)
+answer = (M//pl)*firstAnswer
+answer+=array[:(M%pl)+1].count(False)
+print(answer)
